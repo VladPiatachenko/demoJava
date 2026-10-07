@@ -1,18 +1,27 @@
 package sumdu.edu.ua;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Student studs[] = new Student[5];
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        for (int i = 0; i < studs.length; i++) {
+            studs[i] = new Student(i+1);
         }
+        List<Student> list = new ArrayList<Student>();
+
+        for (int i = 0; i < studs.length; i++) {
+                if(studs[i].id%2==0) list.add(studs[i]);
+        }
+
+        for(Student st:list){
+            System.out.println(st.id);
+        }
+
     }
 }
 
