@@ -12,14 +12,14 @@ public class Main {
         for (int i = 0; i < studs.length; i++) {
             studs[i] = new Student(i+1);
         }
-        List<Student> list = new ArrayList<Student>();
+        List<Person> list = new ArrayList<Person>();
 
         for (int i = 0; i < studs.length; i++) {
                 if(studs[i].id%2==0) list.add(studs[i]);
         }
 
-        for(Student st:list){
-            System.out.println(st.id);
+        for(Person st:list){
+            System.out.println(st.toString());
         }
 
     }
