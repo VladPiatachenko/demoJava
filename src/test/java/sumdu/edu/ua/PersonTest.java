@@ -21,7 +21,7 @@ public class PersonTest {
     @Test
     public void exceptionTest(){
        Exception e = Assertions.assertThrows(IllegalArgumentException.class, () -> {new Person("A");});
-       Assertions.assertEquals("Less then 3 or more then 20 will cause exception",e.getMessage());
+       Assertions.assertEquals("Less then 2 or more then 20 will cause exception",e.getMessage());
     }
 
 }
