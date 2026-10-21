@@ -13,12 +13,17 @@ public class Person {
     }
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getNameLowerCase() {
         return name.toLowerCase();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String name) throws IllegalArgumentException {
+        if(name.length()<3||name.length()>20){throw new IllegalArgumentException("Less then 3 or more then 20 will cause exception");}
+        this.name = name.toLowerCase();
     }
 
     @Override
