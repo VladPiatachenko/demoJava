@@ -10,21 +10,30 @@ public class Main {
         Student st1= new Student("Allen");
         st1.setGroupId("ASP-21");
         st1.setStudId("SB12345678");
+        st1.subs.add(new Subject(Syllabus.Programming));
+
         Student st2= new Student(st1);
 
         System.out.println(st1.toString());
-        st1.subs.add(new Subject(Syllabus.JavaOOP));
+        System.out.println(st2.toString());
+
+
         st1.subs.add(new Subject(Syllabus.MPF));
-        st1.subs.add(new Subject(Syllabus.Programming));
 
+        st2.subs.add(new Subject(Syllabus.valueOf("TSS")));
 
-        st2.subs.add(new Subject(Syllabus.IIT));
-        st2.subs.add(new Subject(Syllabus.MPF));
-        st2.subs.add(new Subject(Syllabus.Programming));
         System.out.println(st2.toString());
         for (Subject sub:st2.subs) {
             System.out.println(sub.toString());
         }
+
+
+        System.out.println(st1.toString());
+        for (Subject sub:st1.subs) {
+            System.out.println(sub.toString());
+        }
+
+
 
 
 
