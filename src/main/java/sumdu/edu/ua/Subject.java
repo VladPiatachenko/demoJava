@@ -10,7 +10,7 @@ class Subject{
     }
 
     public Subject(Syllabus  syllabus) {
-        this.id= syllabus.id;
+        this.id= syllabus.getId();
         this.name = syllabus.toString();
     }
 
