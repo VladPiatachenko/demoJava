@@ -1,4 +1,4 @@
-package sumdu.edu.ua;
+package sumdu.edu.ua.actors;
 
 public class Person {
     String name;

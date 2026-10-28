@@ -1,13 +1,15 @@
-package sumdu.edu.ua;
+package sumdu.edu.ua.actors;
+
+import sumdu.edu.ua.subject.Subject;
 
 import java.util.ArrayList;
 
-public class Student extends Person{
+public class Student extends Person {
     int id;
     static int nextId=0;
     String groupId;
     String studId;
-    ArrayList<Subject> subs;
+    public ArrayList<Subject> subs;
 
     public Student(String name) {
         super(name);

@@ -1,4 +1,4 @@
-package sumdu.edu.ua;
+package sumdu.edu.ua.enums;
 
 public enum Syllabus {
     JavaOOP(1),MPF(2),Programming(3),IIT(4), TSS(5), DataScience(6);

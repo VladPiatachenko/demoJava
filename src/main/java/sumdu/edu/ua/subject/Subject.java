@@ -1,6 +1,8 @@
-package sumdu.edu.ua;
+package sumdu.edu.ua.subject;
 
-class Subject{
+import sumdu.edu.ua.enums.Syllabus;
+
+public class Subject{
     int id;
     String name;
     int studScore;
@@ -9,7 +11,7 @@ class Subject{
         this.studScore = studScore;
     }
 
-    public Subject(Syllabus  syllabus) {
+    public Subject(Syllabus syllabus) {
         this.id= syllabus.getId();
         this.name = syllabus.toString();
     }
