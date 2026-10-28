@@ -12,7 +12,7 @@ public class PersonTest {
     public void createPersonTest(){
         person = new Person();
         person.setName("John");
-        Assertions.assertEquals("John",person.name);
+        Assertions.assertEquals("John", person.getName());
 
     }
     @Test
