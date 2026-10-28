@@ -1,42 +1,28 @@
 package sumdu.edu.ua;
 
+import sumdu.edu.ua.actors.Student;
+import sumdu.edu.ua.actors.StudentFootballer;
+import sumdu.edu.ua.actors.StudentOrientirer;
+import sumdu.edu.ua.enums.Syllabus;
+import sumdu.edu.ua.subject.Subject;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Student st1= new Student("Allen");
-        st1.setGroupId("ASP-21");
-        st1.setStudId("SB12345678");
-        st1.subs.add(new Subject(Syllabus.Programming));
+       ArrayList<Student> list = new ArrayList<Student>();
 
-        Student st2= new Student(st1);
+       list.add(new Student("Harry Potter"));
+       list.add(new StudentFootballer("Ted Lasso","egg-shaped ball"));
+       list.add(new StudentOrientirer("Jack Sparrow","magic compass"));
 
-        System.out.println(st1.toString());
-        System.out.println(st2.toString());
-
-
-        st1.subs.add(new Subject(Syllabus.MPF));
-
-        st2.subs.add(new Subject(Syllabus.valueOf("TSS")));
-
-        System.out.println(st2.toString());
-        for (Subject sub:st2.subs) {
-            System.out.println(sub.toString());
-        }
-
-
-        System.out.println(st1.toString());
-        for (Subject sub:st1.subs) {
-            System.out.println(sub.toString());
-        }
-
-
-
-
-
+       for(Student student : list){
+           System.out.println(student.toString());
+       }
     }
 }
 
